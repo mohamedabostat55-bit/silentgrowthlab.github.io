@@ -1,40 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SILENT GROWTH LAB</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SILENT GROWTH LAB - Build quietly. Grow powerfully. Automate your business with AI tools.">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-      color: #fff;
-      line-height: 1.6;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
+<meta charset="UTF-8">
+<title>SILENT GROWTH LAB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SILENT GROWTH LAB - Build quietly. Grow powerfully. Automate your business with AI tools.">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  .container { width: 90%; max-width: 1200px; margin: auto; }
 
-    /* ===== Header ===== */
-    header {
-      padding: 80px 0 60px;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-      color: #ff90e8;
-      text-shadow: 2px 2px 6px #000;
-    }
-    header p {
-      font-size: 1.3rem;
+  /* ===== Navbar ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #111;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #ff90e8; }
+
+  /* ===== Header ===== */
+  header { padding: 80px 0 60px; text-align: center; }
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff90e8, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p { font-size: 1.3rem; color: #d1d1d1; margin-bottom: 40px; }
+  header img { width: 100%; max-width: 850px; border-radius: 15px; margin: 30px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+.parallax-img {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-block;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 10px 5px;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    background-size: 200% 200%;
+  }
+  .btn:hover { transform: translateY(-6px) scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+
+  .gumroad {
+    background: linear-gradient(45deg, #ff90e8, #ff00c8);
+    color: #000;
+  }
+  .gumroad:hover { background-position: right center; }
+
+  .payhip {
+    background: linear-gradient(45deg, #4f46e5, #1f3bb3);
+    color: #fff;
+  }
+  .payhip:hover { background-position: right center; }
+
+  /* ===== Sections ===== */
+  section {
+    padding: 80px 0;
+    border-top: 1px solid #222;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  section.visible { opacity: 1; transform: translateY(0); }
+
+  h2 {
+    text-align: center; margin-bottom: 50px;
+    font-size: 2.2rem; color: #ff90e8;
+    background: linear-gradient(90deg, #ff90e8, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .box {
+    background: linear-gradient(145deg, #161616, #1f1f1f);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+  .box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  }
+
+  /* ===== Footer ===== */
+  footer { text-align: center; padding: 40px 20px; font-size: 0.95rem; color: #bbb; border-top: 1px solid #222; }
+  footer a { color: #ff90e8; text-decoration: none; margin: 0 8px; transition: color 0.3s; }
+  footer a:hover { color: #fff; }
+
+  /* ===== Mobile ===== */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.4rem; }
+    header p { font-size: 1rem; }
+    .btn { padding: 12px 25px; font-size: 0.95rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <a href="#header">Home</a>
+  <a href="#what">What You’ll Get</a>
+  <a href="#who">Who Is This For</a>
+</nav>
+
+<!-- ===== Header ===== -->
+<header id="header">
+  <div class="container">
+    <h1>SILENT GROWTH LAB</h1>
+    <p>Build quietly. Grow powerfully. Automate your business and boost your income with AI tools.</p>
+    <img src="file_0000000056d0720abd517a957aa71e54.png"
+     alt="Silent Growth Lab"
+     class="parallax-img">
+    <a href="https://abostat.gumroad.com/l/wmlui" class="btn gumroad" target="_blank" rel="noopener noreferrer">Buy on Gumroad</a>
+    <a href="https://payhip.com/b/wT8hu" class="btn payhip" target="_blank" rel="noopener noreferrer">Buy on Payhip</a>
+  </div>
+</header>
+
+<!-- ===== What You’ll Get ===== -->
+<section id="what">
+  <div class="container">
+    <h2>What You’ll Get</h2>
+    <div class="grid">
+      <div class="box">AI Automation Templates</div>
+      <div class="box">High-Converting Prompts</div>
+      <div class="box">Business & Productivity Systems</div>
+      <div class="box">Step-by-Step Setup Guides</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Who Is This For ===== -->
+<section id="who">
+  <div class="container">
+    <h2>Who Is This For?</h2>
+    <div class="grid">
+      <div class="box">Digital Product Creators</div>
+      <div class="box">Solopreneurs & Freelancers</div>
+      <div class="box">Online Business Owners</div>
+      <div class="box">Creators Who Want Quiet Growth</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p>© 2026 SILENT GROWTH LAB. All rights reserved.</p>
+  <p>
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a> |
+    <a href="#">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- ===== Scroll Animation Script ===== -->
+<script>
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("visible"); });
+  }, { threshold: 0.2 });
+  sections.forEach(section => observer.observe(section));
+</script>
+<script>
+  const parallaxImg = document.querySelector(".parallax-img");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    parallaxImg.style.transform = `translateY(${scrollY * 0.15}px)`;
+  });
+</script>
+</body>
+</html>      font-size: 1.3rem;
       color: #d1d1d1;
       margin-bottom: 40px;
     }
