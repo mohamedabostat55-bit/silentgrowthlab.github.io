@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SILENT GROWTH LAB – Build Quietly</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Silent Growth Lab helps solopreneurs grow using AI automation systems silently and efficiently.">
+<meta name="keywords" content="AI Automation, Digital Products, Online Business, Silent Growth">
+<meta name="author" content="Silent Growth Lab">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle at top, #1b1b1b, #0b0b0b);
+  color: #ffffff;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(10,10,10,.9);
+  backdrop-filter: blur(6px);
+  padding: 14px 0;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ff90e8;
+}
+
+/* ================= HERO ================= */
+header {
+  padding: 90px 0 70px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.1rem;
+  background: linear-gradient(90deg,#ff90e8,#6a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 1.15rem;
+  color: #d1d1d1;
+}
+
+.hero-img {
+  margin: 40px auto 25px;
+  max-width: 860px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.7);
+  will-change: transform;
+}
+
+/* ================= CTA ================= */
+.cta {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  margin: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.gumroad {
+  background: linear-gradient(45deg,#ff90e8,#ff00c8);
+  color: #000;
+}
+
+.payhip {
+  background: linear-gradient(45deg,#5f5cff,#3a37c8);
+  color: #fff;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 85px 0;
+  border-top: 1px solid #1f1f1f;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg,#ff90e8,#6a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg,#151515,#1d1d1d);
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= COUNTDOWN ================= */
+#countdown {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ================= EMAIL ================= */
+.email-box {
+  text-align: center;
+}
+
+.email-box input {
+  padding: 14px;
+  width: 260px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px 15px;
+  text-align: center;
+  font-size: .95rem;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  header h1 { font-size: 2.3rem; }
+  header p { font-size: 1rem; }
+  .btn { padding: 12px 30px; font-size: .95rem; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#features">Features</a>
+  <a href="#reviews">Reviews</a>
+</nav>
+
+<header id="home">
+  <div class="container">
+    <h1>SILENT GROWTH LAB</h1>
+    <p>Build quietly. Grow powerfully with AI automation.</p>
+
+    <img src="file_0000000056d0720abd517a957aa71e54.png" alt="Silent Growth Lab" class="hero-img">
+
+    <!-- BUY BUTTONS – ONLY LOCATION -->
+    <div class="cta">
+      <a href="https://abostat.gumroad.com/l/wmlui" class="btn gumroad" target="_blank">Buy on Gumroad</a>
+      <a href="https://payhip.com/b/wT8hu" class="btn payhip" target="_blank">Buy on Payhip</a>
+    </div>
+  </div>
+</header>
+
+<section id="offer">
+  <div class="container">
+    <h2>Limited Offer Ends In</h2>
+    <div id="countdown"></div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <h2>What You Get</h2>
+    <div class="grid">
+      <div class="card">AI Automation Systems</div>
+      <div class="card">High-Converting Prompts</div>
+      <div class="card">Ready-to-Sell Digital Assets</div>
+      <div class="card">Silent Growth Strategy</div>
+    </div>
+  </div>
+</section>
+
+<section id="email">
+  <div class="container email-box">
+    <h2>Join The Silent List</h2>
+    <form onsubmit="event.preventDefault(); alert('Subscribed (demo)');">
+      <input type="email" placeholder="Your email" required><br>
+      <button class="btn gumroad">Join Free</button>
+    </form>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2>Real Feedback</h2>
+    <div class="grid">
+      <div class="card">“Clean systems, no noise.”<br><strong>– Alex</strong></div>
+      <div class="card">“Exactly what solopreneurs need.”<br><strong>– Sara</strong></div>
+      <div class="card">“Worth more than the price.”<br><strong>– Omar</strong></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Silent Growth Lab – All Rights Reserved
+</footer>
+
+<script>
+/* ===== Scroll Reveal ===== */
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add("visible");
+  });
+},{ threshold: 0.2 });
+sections.forEach(sec => observer.observe(sec));
+
+/* ===== Parallax ===== */
+const heroImg = document.querySelector(".hero-img");
+window.addEventListener("scroll", () => {
+  heroImg.style.transform = `translateY(${window.scrollY * 0.12}px)`;
+});
+
+/* ===== Countdown ===== */
+const endTime = Date.now() + 24 * 60 * 60 * 1000;
+setInterval(() => {
+  const diff = endTime - Date.now();
+  if (diff <= 0) {
+    countdown.textContent = "Offer Ended";
+    return;
+  }
+  const h = Math.floor(diff / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  countdown.textContent = `${h}h ${m}m ${s}s`;
+}, 1000);
+</script>
+
+</body>
+  </html>
